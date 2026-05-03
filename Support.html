@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Support - DVI Pro</title>
+<title>DVI Pro Support</title>
 
 <style>
 body {
@@ -47,50 +47,50 @@ header h1 {
     margin-bottom: 20px;
 }
 
-/* highlight primary support card */
+/* primary card highlight */
 .card.primary {
     border: 1px solid #3b82f6;
-    box-shadow: 0 0 20px rgba(59,130,246,0.15);
+    box-shadow: 0 0 20px rgba(59,130,246,0.12);
 }
 
-/* quick actions row */
-.actions {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin-top: 15px;
+/* FORM FIXES */
+form {
+    margin-top: 10px;
 }
 
-.action-btn {
-    flex: 1;
-    min-width: 180px;
-    text-align: center;
-    padding: 12px;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 10px;
-    color: #f1f5f9;
-    text-decoration: none;
-    transition: 0.2s;
+.form-group {
+    margin-bottom: 14px;
 }
 
-.action-btn:hover {
-    background: rgba(59,130,246,0.2);
-    border-color: #3b82f6;
+label {
+    display: block;
+    font-size: 0.9rem;
+    color: #cbd5e1;
+    margin-bottom: 6px;
 }
 
-/* form */
 input, textarea {
     width: 100%;
     padding: 12px;
-    margin-top: 10px;
-    margin-bottom: 15px;
     border-radius: 8px;
-    border: 1px solid rgba(255,255,255,0.1);
-    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(0,0,0,0.35);
     color: white;
+    outline: none;
+    transition: 0.2s;
 }
 
+input:focus, textarea:focus {
+    border-color: #3b82f6;
+    background: rgba(0,0,0,0.45);
+}
+
+textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+/* button */
 button {
     padding: 12px 20px;
     background: #3b82f6;
@@ -99,6 +99,8 @@ button {
     border-radius: 8px;
     cursor: pointer;
     font-weight: bold;
+    width: 100%;
+    transition: 0.2s;
 }
 
 button:hover {
@@ -130,27 +132,14 @@ small {
 
 <div class="container">
 
-<!-- PRIMARY SUPPORT CARD -->
+<!-- PRIMARY SUPPORT -->
 <div class="card primary">
 <h2>Need Help?</h2>
 <p>
 If you're experiencing issues or have questions about DVI Pro, our support team is here to help.
-Please include details like your device, issue description, and screenshots if possible.
+Please include as much detail as possible so we can assist you faster.
 </p>
 <small>Typical response time: 24–48 hours</small>
-</div>
-
-<!-- QUICK ACTIONS -->
-<div class="card">
-<h2>Quick Actions</h2>
-<p>Get help faster by choosing an option below:</p>
-
-<div class="actions">
-    <a class="action-btn" href="privacy.html">Privacy Policy</a>
-    <a class="action-btn" href="terms.html">Terms of Use</a>
-    <a class="action-btn" href="mailto:Mod3rnsociety@gmail.com">Email Support</a>
-    <a class="action-btn" href="#">Report a Bug</a>
-</div>
 </div>
 
 <!-- CONTACT FORM -->
@@ -161,13 +150,25 @@ Please include details like your device, issue description, and screenshots if p
 
     <input type="hidden" name="access_key" value="7c5c655c-a097-4853-8883-b76824eeb8e6">
 
-    <input type="text" name="name" placeholder="Your Name" required>
+    <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" name="name" placeholder="Enter your name" required>
+    </div>
 
-    <input type="email" name="email" placeholder="Your Email" required>
+    <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" name="email" placeholder="Enter your email" required>
+    </div>
 
-    <input type="text" name="subject" placeholder="Subject (optional)">
+    <div class="form-group">
+        <label>Subject (optional)</label>
+        <input type="text" name="subject" placeholder="What is this regarding?">
+    </div>
 
-    <textarea name="message" placeholder="Describe your issue in detail..." required></textarea>
+    <div class="form-group">
+        <label>Message</label>
+        <textarea name="message" placeholder="Describe your issue in detail..." required></textarea>
+    </div>
 
     <button type="submit">Send Message</button>
 
@@ -178,9 +179,9 @@ Please include details like your device, issue description, and screenshots if p
 <!-- OTHER HELP -->
 <div class="card">
 <h2>Other Help</h2>
-<p>Email directly: <a href="mailto:Mod3rnsociety@gmail.com">Mod3rnsociety@gmail.com</a></p>
-<p><a href="terms.html">View Terms of Use</a></p>
-<p><a href="privacy.html">View Privacy Policy</a></p>
+<p>Email directly: <a href="mailto:Mod3rnsociety@gmail.com" style="color:#93c5fd;">Mod3rnsociety@gmail.com</a></p>
+<p><a href="terms.html" style="color:#93c5fd;">View Terms of Use</a></p>
+<p><a href="privacy.html" style="color:#93c5fd;">View Privacy Policy</a></p>
 </div>
 
 </div>
